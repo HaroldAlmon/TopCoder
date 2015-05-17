@@ -22,17 +22,31 @@ public class SRM631_ParamTests {
 	@Parameters
 	public static List<Object []> data() {
 		return Arrays.asList( new Object [][] {
-			{ new String[] {"W"}, 1 },
+			{ new String[] {
+				"W"}, 1 },
 			
-			{ new String[] {"WB",
-							"BW"}, 1 },
+			{ new String[] {
+				"WB",
+				"BW"}, 1 },
 							
-			{ new String[] {"BWW",
-							"BBB",
-							"BWB"}, 3 }
-			} );
+			{ new String[] {
+				"BWW",
+				"BBB",
+				"BWB"}, 3 },
+		
+			{ new String[] {
+				"BBWWBBWW",
+				"BBWWBBWW",
+				"WWBBWWBB",
+				"WWBBWWBB",
+				"BBWWBBWW",
+				"BBWWBBWW",
+				"WWBBWWBB",
+				"WWBBWWBB"}, 2 }
+			});
+		
+
 	}
-	
 		
 	public SRM631_ParamTests(String[] input, int expectedResult) {
 		this.input = input;
