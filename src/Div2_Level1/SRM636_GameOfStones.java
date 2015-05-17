@@ -1,6 +1,7 @@
 package Div2_Level1;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 public class SRM636_GameOfStones {
@@ -10,32 +11,57 @@ public class SRM636_GameOfStones {
 	}
 	
 	public int count(int[] stones) {
-		int result = 0;
+		int actionsTotal = 0;
+		int stonesSum = 0;
+
+		stonesSum = sumOfStones( stones );
+
+		if ( isStonesSumValid( stones.length, stonesSum ) == false )
+			return -1;
 		
-		int sum = 0;
+		int targetSum = stonesSum / stones.length;
 		
-		if (stones.length == 1) return 0; 
-		
-		for (int i = 0; i < stones.length; i++) {
-			sum += stones[i];
+		for ( int stonePos = 0; stonePos < stones.length; stonePos++ ) {
+			actionsTotal += Math.abs( movesRequiredToReachTargetCount(targetSum, stones[ stonePos]  ) );
 		}
-		
-		if(sum % 4 != 0) return -1;
-		
-		sum = sum / stones.length;
-		
-		for (int i = 0; i < stones.length; i++) {
-			result += Math.abs((stones[i] - sum)/2);
+
+		// Each move adjusts the count on 2 piles, so cut the moves in half...
+		actionsTotal = movesToActions(actionsTotal);
+
+		System.out.printf( "%d%n", actionsTotal );
+		return actionsTotal;
+	}
+
+	private int movesToActions(int actionsTotal) {
+		return actionsTotal / 2;
+	}
+
+	private int movesRequiredToReachTargetCount(int targetSum, int pileCount) {
+		return ( targetSum - pileCount  ) / 2;
+	}
+
+	private boolean isStonesSumValid(int numberOfPiles, int stonesSum) {
+		if( numberOfPiles == 1) 
+			return true;
+		if( stonesSum % 4 != 0) 
+			return false;
+		return true;
+	}
+
+	private int sumOfStones(int[] stones) {
+		int stonesSum = 0;
+
+		for ( int i = 0; i < stones.length; i++ ) {
+			stonesSum += stones[ i ];
 		}
-		result /= 2;
-		System.out.printf("%d\n", result);
-		return result;
+
+		return stonesSum;
 	}
 
 	@Test
 	public void test1() {	
 		int[] a = {7, 15, 9, 5};
-		assertTrue( count(a) == 3 );
+		assertEquals( 3, count(a) );
 
 		int[] b = {17};
 		assertTrue( count(b) == 0 );
