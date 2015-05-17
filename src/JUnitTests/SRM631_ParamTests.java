@@ -22,21 +22,21 @@ public class SRM631_ParamTests {
 	@Parameters
 	public static List<Object []> data() {
 		return Arrays.asList( new Object [][] {
-			{ new String[] {"W"}, new Integer[] {1} },
+			{ new String[] {"W"}, 1 },
 			
 			{ new String[] {"WB",
-							"BW"}, new Integer[] {1} },
+							"BW"}, 1 },
 							
 			{ new String[] {"BWW",
 							"BBB",
-							"BWB"}, new Integer[] {3} }
+							"BWB"}, 3 }
 			} );
 	}
 	
 		
-	public SRM631_ParamTests(String[] input, Integer[] expectedResult) {
+	public SRM631_ParamTests(String[] input, int expectedResult) {
 		this.input = input;
-		this.expectedResult = expectedResult[0];
+		this.expectedResult = expectedResult;
 	}
 	
 	@Test(timeout = 500)
