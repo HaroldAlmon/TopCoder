@@ -6,13 +6,14 @@ import org.junit.Test;
 public class SRM637_GreaterGameDiv2 {
 	public int calc(int[] snuke, int[] sothe) {
 		int result = 0;
-		for (int i = 0; i < sothe.length; i++) {
-			if(snuke[i] > sothe[i]) {
+		for (int digitIndex = 0; digitIndex < sothe.length; digitIndex++) {
+			if(snuke[digitIndex] > sothe[digitIndex]) {
 				result++;
 			}
 		}
 		return result;
 	}
+
 	@Test
 	public void test1() {
 		int[] a = {1,3};
