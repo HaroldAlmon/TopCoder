@@ -7,16 +7,17 @@ import org.junit.Test;
 public class SRM638_NamingConvention {
 	public String toCamelCase(String variableName) {
 		StringBuffer result = new StringBuffer();
-		char c;
-		for (int i = 0; i < variableName.length(); i++) {
-			c = variableName.charAt(i);
-			if( c == '_' ) {
-				result.append( Character.toUpperCase(variableName.charAt(i+1)) );
-				i++;
+		char digit;
+		for (int digitIndex = 0; digitIndex < variableName.length(); digitIndex++) {
+			digit = variableName.charAt(digitIndex);
+			
+			if( digit == '_' ) {
+				result.append( Character.toUpperCase(variableName.charAt(digitIndex+1)) );
+				digitIndex += 1;
 			} else
-				result.append(c);
+				result.append(digit);
 		}
-		System.out.printf("%s", result);
+		System.out.printf("%s%n", result);
 		return result.toString();
 	}
 	@Test
