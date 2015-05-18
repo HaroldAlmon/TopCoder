@@ -26,14 +26,6 @@ public class SRM636_GameOfStones {
 		return actionsTotal;
 	}
 
-	private int movesToActions(int movesTotal) {
-		// Each move on one pile results in a second move on another pile so number of Actions = moves / 2
-		return movesTotal / 2;
-	}
-
-	private int movesRequiredToReachTargetCount(int targetSum, int pileCount) {
-		return ( targetSum - pileCount  ) / 2;
-	}
 
 	private boolean isStonesSumValid(int numberOfPiles, int stonesSum) {
 		if( numberOfPiles == 1) 
@@ -41,6 +33,15 @@ public class SRM636_GameOfStones {
 		if( stonesSum % 4 != 0) 
 			return false;
 		return true;
+	}
+
+	private int movesRequiredToReachTargetCount(int targetSum, int pileCount) {
+		return ( targetSum - pileCount  ) / 2;
+	}
+
+	private int movesToActions(int movesTotal) {
+		// Each move on one pile results in a second move on another pile so number of Actions = moves / 2
+		return movesTotal / 2;
 	}
 
 	private int sumOfStones(int[] stones) {
@@ -52,7 +53,7 @@ public class SRM636_GameOfStones {
 
 		return stonesSum;
 	}
-
+	
 	@Test
 	public void GameOfStones() {	
 		int[] a = {7, 15, 9, 5};
@@ -73,4 +74,5 @@ public class SRM636_GameOfStones {
 		int[] f = {10, 15, 20, 12, 1, 20};
 		assertTrue( count(f) == -1 );
 	}
+
 }
