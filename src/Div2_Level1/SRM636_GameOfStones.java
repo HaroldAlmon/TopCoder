@@ -26,7 +26,6 @@ public class SRM636_GameOfStones {
 		return actionsTotal;
 	}
 
-
 	private boolean isStonesSumValid(int numberOfPiles, int stonesSum) {
 		if( numberOfPiles == 1) 
 			return true;
@@ -40,7 +39,7 @@ public class SRM636_GameOfStones {
 	}
 
 	private int movesToActions(int movesTotal) {
-		// Each move on one pile results in a second move on another pile so number of Actions = moves / 2
+		// Each move on one pile results in a second move on another pile so number of Actions = Moves / 2
 		return movesTotal / 2;
 	}
 
