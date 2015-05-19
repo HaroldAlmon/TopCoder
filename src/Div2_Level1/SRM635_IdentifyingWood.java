@@ -5,8 +5,8 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class SRM635_IdentifyingWood {
-	private String YES = "Yep, it's wood";
-	private String NO = "Nope";
+	private final String YES = "Yep, it's wood";
+	private final String NO = "Nope";
 
 	public String check(String s, String t) {
 		String result = NO;
@@ -37,7 +37,7 @@ public class SRM635_IdentifyingWood {
 	}
 
 	@Test
-	public void test1() {	
+	public void IdentifyingWood() {	
 		assertTrue( check("absdefgh", "asdf").equals(YES) );
 		assertTrue( check("oxoxoxox", "ooxxoo").equals(NO) );
 		assertTrue( check("oxoxoxox", "xxx").equals(YES) );
