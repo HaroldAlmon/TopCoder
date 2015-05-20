@@ -1,26 +1,25 @@
 package Div2_Level1;
 
 import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
 
 public class SRM642_ForgetfulAddition {
-	int minNumber(String expression) {
+	int minNumber( String expression ) {
 		int result = Integer.MAX_VALUE;
 		
-		for (int i = 1; i < expression.length(); i++) {
+		for ( int digitIndex = 1; digitIndex < expression.length(); digitIndex++ ) {
 			int int1;
 			int int2;
 			int total; 
 			
-			int1 = Integer.parseInt(expression.substring(0, i));
-			int2 = Integer.parseInt(expression.substring(i, expression.length()));
+			int1 = Integer.parseInt( expression.substring( 0, digitIndex) );
+			int2 = Integer.parseInt( expression.substring( digitIndex, expression.length() ) );
 
 			total = int1 + int2;
 			
-			System.out.printf("int1 = %d, int2 = %d\n", int1, int2);
+			System.out.printf( "int1 = %d, int2 = %d%n", int1, int2 );
 			
-			if (total < result)
+			if ( total < result )
 				result = total;
 		}
 
