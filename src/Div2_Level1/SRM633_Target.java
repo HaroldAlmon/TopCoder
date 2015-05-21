@@ -1,5 +1,7 @@
 package Div2_Level1;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 public class SRM633_Target {
@@ -54,9 +56,7 @@ public class SRM633_Target {
 	
 	private void fillWithSpaces( char[][] target, int size ) {
 		for( int row = 0; row < size ; row++) {
-			for( int column = 0; column < size ; column++ ){
-				target[ row ][ column ] = ' ';
-			}
+			Arrays.fill( target[ row ], ' ');
 		}
 	}
 
