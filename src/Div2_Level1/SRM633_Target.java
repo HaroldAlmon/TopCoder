@@ -1,6 +1,5 @@
 package Div2_Level1;
 
-import java.util.Arrays;
 import org.junit.Test;
 
 public class SRM633_Target {
