@@ -9,6 +9,7 @@ public class SRM633_Target {
 		int centrePos = targetSize / 2 + 1;
 		char[][] grid = new char[ targetSize ][ targetSize ];
 
+		fillWithSpaces( grid, targetSize);
 		drawDecreasingRectangles(targetSize, centrePos, grid);
 		printTarget(targetSize, paperTarget, grid);
 		
@@ -50,9 +51,17 @@ public class SRM633_Target {
 			grid[ origin + fillSize - 1 ][ column ] = '#';
 		}
 	}
+	
+	private void fillWithSpaces( char[][] target, int size ) {
+		for( int row = 0; row < size ; row++) {
+			for( int column = 0; column < size ; column++ ){
+				target[ row ][ column ] = ' ';
+			}
+		}
+	}
 
 	@Test
 	public void Target() {
-		draw(9);
+		draw(5);
 	}
 }
