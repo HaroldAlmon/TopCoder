@@ -1,4 +1,6 @@
 package Div2_Level1;
+
+// Passed TopCoder System Test 5/24/2015
 public class SRM145_ImageDithering {
 	public int count(String dither, String[] screen) {
 		int ditherCount = 0;

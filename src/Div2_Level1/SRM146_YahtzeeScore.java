@@ -7,6 +7,7 @@ import java.util.HashMap;
 
 import org.junit.Test;
 
+// Passed TopCoder System Test 5/24/2015
 public class SRM146_YahtzeeScore {
 	public int maxPoints(int[] toss) {
 		int result = 0;

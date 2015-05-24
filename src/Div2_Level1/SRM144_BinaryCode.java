@@ -3,18 +3,19 @@ package Div2_Level1;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
+// Passed Topcoder System Test 5/24/2015
 public class SRM144_BinaryCode { 
-	public String[] decode(String input) {
+	public String[] decode(String message) {
 		String[] result = new String[2];
 		
-		byte[] Q = new byte[input.length()];
+		byte[] Q = new byte[message.length()];
 		
 		// Convert the encrypted string to a byte array...
-		for(int i = 0; i < input.length(); i += 1) {
-			Q[i] = Byte.parseByte(input.substring(i, i + 1));
+		for(int i = 0; i < message.length(); i += 1) {
+			Q[i] = Byte.parseByte(message.substring(i, i + 1));
 		}
 		
-		byte[] P = new byte[input.length() + 2];
+		byte[] P = new byte[message.length() + 2];
 		
 		// P[0] is a guard position outside the encrypted string...
 		P[0] = 0;
