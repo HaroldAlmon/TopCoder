@@ -1,8 +1,4 @@
 package Div2_Level1;
-import static org.junit.Assert.assertTrue;
-import java.util.Arrays;
-import org.junit.Test;
-
 public class SRM145_ImageDithering {
 	public int count(String dither, String[] screen) {
 		int ditherCount = 0;
