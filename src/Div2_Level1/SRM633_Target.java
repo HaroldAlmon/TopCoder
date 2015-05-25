@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
+//Passed Topcoder System Test
 public class SRM633_Target {
 	public String[] draw(int n) {
 		int targetSize = n;
