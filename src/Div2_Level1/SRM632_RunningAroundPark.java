@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+// Passed TopCoder System Test 05/25/2015.
 public class SRM632_RunningAroundPark {
 	public int numberOfLap(int N, int[] d) {
 		int laps = 1;

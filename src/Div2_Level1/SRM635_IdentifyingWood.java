@@ -4,9 +4,10 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+//Passed TopCoder System Test 5/25/2015
 public class SRM635_IdentifyingWood {
-	private final String YES = "Yep, it's wood";
-	private final String NO = "Nope";
+	private final String YES = "Yep, it's wood.";
+	private final String NO = "Nope.";
 
 	public String check(String s, String t) {
 		String result = NO;
