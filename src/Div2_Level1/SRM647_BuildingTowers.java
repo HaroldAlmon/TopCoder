@@ -1,5 +1,6 @@
 package Div2_Level1;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
@@ -93,7 +94,7 @@ public class SRM647_BuildingTowers {
 		int[] t = {1,1};
 		
 		long result = maxHeight(10, 1, x, t);
-		System.out.printf("max(10,1) = %d\n", result);
+		System.out.printf("max(10,1) = %d%n", result);
 		assertTrue( result == 3);
 	}
 	
@@ -103,7 +104,7 @@ public class SRM647_BuildingTowers {
 		int[] t = {8,22,1,55,42};
 		
 		long result = maxHeight(20, 3, x, t);
-		System.out.printf("max(20,3) = %d\n", result);
+		System.out.printf("max(20,3) = %d%n", result);
 		assertTrue( result == 22);
 	}
 	
@@ -113,7 +114,7 @@ public class SRM647_BuildingTowers {
 	int[] t = {89,81,88,42,55,92,19,91,71,42,72,18,86,89,88,75,29,98,63,74,45,11,68,34,94,20,69,33,50,69,54};
 	
 	long result = maxHeight(780, 547990606, x, t);
-	System.out.printf("max(780,547990606) = %d\n", result);
+	System.out.printf("max(780,547990606) = %d%n", result);
 	//28,495,511,604
 	assertTrue( result == 28495511604L);
 	}
@@ -143,9 +144,9 @@ public class SRM647_BuildingTowers {
 			11502,180,3186,5560,778988,42449532,269666,10982579,48,3994,1,9};
 	
 	long result = maxHeight(7824078, 2374, x, t);
-	System.out.printf("max(7824078, 2374) = %d\n", result);
+	System.out.printf("max(7824078, 2374) = %d%n", result);
 
-	assertTrue( result == 1365130725);
+	assertEquals( 1365130725, result);
 	}
 }
 
