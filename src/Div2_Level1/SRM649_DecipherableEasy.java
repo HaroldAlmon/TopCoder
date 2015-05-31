@@ -9,7 +9,6 @@ public class SRM649_DecipherableEasy {
 		if (s.length() != t.length() + 1 ) return "Impossible";
 		for (int i = 0; i < s.length() - 1; i++) {
 			if (s.charAt(i) != t.charAt(i)) {
-				//return s.substring(i + 1).equals(t.substring(i)) ? "Possible" : "Impossible";
 				// regionMatches() faster than substring...
 				return s.regionMatches( (i + 1), t.substring(i), i, t.length() - i) ? "Possible" : "Impossible";
 			}
