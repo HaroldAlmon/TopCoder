@@ -1,35 +1,49 @@
 package Div2_Level1;
 
 import static org.junit.Assert.assertTrue;
-
+import org.junit.Test;
 import java.util.Arrays;
 
-import org.junit.Test;
-
+/** Passed TopCoder System Test 5/27/2014 */
 public class SRM645_BacteriesColony {
 	public int[] performTheExperiment(int[] colonies) {
-		boolean changed = false;
-		int[] copy1 = Arrays.copyOf(colonies, colonies.length);
-		int[] copy2 = Arrays.copyOf(colonies, colonies.length);
+		boolean colonySizeChanged = false;
+		int[] colonyBefore = Arrays.copyOf(colonies, colonies.length);
+		int[] colonyAfter = Arrays.copyOf(colonies, colonies.length);
 		do {
-			changed = false;
-			for (int i = 0; i < colonies.length - 2; i++) {
-				if (copy1[i + 1] > copy1[i]
-						&& copy1[i + 1] > copy1[i + 2]) {
-					changed = true;
-					copy2[i + 1]--;
-				}
-
-				if (copy1[i + 1] < copy1[i]
-						&& copy1[i + 1] < copy1[i + 2]) {
-					changed = true;
-					copy2[i + 1]++;
-				}
+			colonySizeChanged = false;
+			for (int vesselNum = 0; vesselNum < colonies.length - 2; vesselNum++) {
+				colonySizeChanged = decreaseColonySize(colonySizeChanged, colonyBefore, colonyAfter, vesselNum);
+				colonySizeChanged = increaseColonySize(colonySizeChanged, colonyBefore, colonyAfter, vesselNum);
 			}
-			copy1 = copy2;
-			copy2 = Arrays.copyOf(copy1, copy1.length);
-		} while (changed);
-		return copy1;
+			colonyBefore = colonyAfter;
+			colonyAfter = Arrays.copyOf(colonyBefore, colonyBefore.length);
+		} while (colonySizeChanged);
+		return colonyBefore;
+	}
+
+	private boolean increaseColonySize(boolean colonySizeChanged,
+			int[] colonyBefore, 
+			int[] colonyAfter, 
+			int vesselNum) {
+		if (colonyBefore[vesselNum + 1] < colonyBefore[vesselNum]
+				&& colonyBefore[vesselNum + 1] < colonyBefore[vesselNum + 2]) {
+			colonySizeChanged = true;
+			colonyAfter[vesselNum + 1]++;
+		}
+		return colonySizeChanged;
+	}
+
+	private boolean decreaseColonySize(boolean colonySizeChanged,
+			int[] colonyBefore, 
+			int[] colonyAfter, 
+			int vesselNum) {
+		if (colonyBefore[vesselNum + 1] > colonyBefore[vesselNum]
+				&& colonyBefore[vesselNum + 1] > colonyBefore[vesselNum + 2]) {
+			colonySizeChanged = true;
+			colonyAfter[vesselNum + 1]--;
+		}
+		return colonySizeChanged;
 	}
 	
 	@Test
