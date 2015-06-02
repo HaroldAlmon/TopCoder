@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class SRM642_ForgetfulAddition {
 	int minNumber( String expression ) {
-		int result = Integer.MAX_VALUE;
+		int minimumSum = Integer.MAX_VALUE;
 		
 		for ( int digitIndex = 1; digitIndex < expression.length(); digitIndex++ ) {
 			int int1;
@@ -17,13 +17,11 @@ public class SRM642_ForgetfulAddition {
 
 			total = int1 + int2;
 			
-			System.out.printf( "int1 = %d, int2 = %d%n", int1, int2 );
-			
-			if ( total < result )
-				result = total;
+			if ( total < minimumSum )
+				minimumSum = total;
 		}
 
-		return result;
+		return minimumSum;
 	}
 
 	@Test
