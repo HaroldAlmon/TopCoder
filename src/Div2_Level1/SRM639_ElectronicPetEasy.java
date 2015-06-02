@@ -14,15 +14,15 @@ public class SRM639_ElectronicPetEasy {
 			feedingTime.add(i);
 			//System.out.printf("Added %d\n", i);
 		}
-		for( int i=st2; i < st2 + p2 * t2; i += p2) {
-			if( feedingTime.contains(i) ){
+		for( int secondFeedingTime=st2; secondFeedingTime < st2 + p2 * t2; secondFeedingTime += p2) {
+			if( feedingTime.contains(secondFeedingTime) ){
 				return "Difficult";
 			}
 		}
 		return "Easy";
 	}
 	
-	@Test
+	@Test(timeout = 500)
 	public void test1() {
 		assertTrue(isDifficult(3, 3, 3, 5, 2, 3) == "Difficult");
 		assertTrue(isDifficult(3, 3, 3, 5, 2, 2) == "Easy");
