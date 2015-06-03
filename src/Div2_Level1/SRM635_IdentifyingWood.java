@@ -3,7 +3,7 @@ package Div2_Level1;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-
+/** Passed TopCoder System Test 05/29/2015 */
 public class SRM635_IdentifyingWood {
 	private final String YES = "Yep, it's wood";
 	private final String NO = "Nope";
