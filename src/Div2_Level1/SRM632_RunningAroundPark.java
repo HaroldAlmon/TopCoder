@@ -3,7 +3,7 @@ package Div2_Level1;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-
+// Passed Topcder System Test 05/29/2015
 public class SRM632_RunningAroundPark {
 	public int numberOfLap(int N, int[] d) {
 		int laps = 1;
