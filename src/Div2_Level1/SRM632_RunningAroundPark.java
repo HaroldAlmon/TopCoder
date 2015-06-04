@@ -22,13 +22,22 @@ public class SRM632_RunningAroundPark {
 	public void RunningAroundPark(){
 		int[] a = {1,2,3};
 		assertEquals( 1, numberOfLap(3, a) );
-		
+	}
+	
+	@Test
+	public void RunningAroundPark2(){
 		int[] b = {6,6};
 		assertEquals( 2, numberOfLap(3, b) );
-		
+	}
+	
+	@Test
+	public void RunningAroundPark3(){
 		int[] c = {3,2,1};
 		assertEquals( 3, numberOfLap(3, c) );
-		
+	}
+	
+	@Test
+	public void RunningAroundPark4(){
 		int[] d = {1,3,5,7,9,2,4,6,8,10};
 		assertEquals( 2, numberOfLap(3, d) );
 	}
