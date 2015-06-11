@@ -1,7 +1,6 @@
 package JUnitTests;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,7 +13,7 @@ import org.junit.runners.Parameterized.Parameters;
 import Div2_Level1.SRM145_ImageDithering;
 
 @RunWith(Parameterized.class)
-public class SRM145_ParamTests {
+public class SRM145_ImageDitheringTest {
 	private String dither;
 	private String[] screen;
 	private int expectedResult;
@@ -70,7 +69,7 @@ public class SRM145_ParamTests {
 		});
 	}
 		
-	public SRM145_ParamTests(String dither, String[] screen, int expectedResult) {
+	public SRM145_ImageDitheringTest(String dither, String[] screen, int expectedResult) {
 		this.dither = dither;
 		this.screen = screen;
 		this.expectedResult = expectedResult;
