@@ -13,7 +13,7 @@ import org.junit.runners.Parameterized.Parameters;
 import Div2_Level1.SRM631_TaroGrid;
 
 @RunWith(Parameterized.class)
-public class SRM631_ParamTests {
+public class SRM631_TaroGridTests {
 	private String[] input;
 	private int expectedResult;
 	private static SRM631_TaroGrid  srm631_TaroGrid  = new SRM631_TaroGrid ();
@@ -48,7 +48,7 @@ public class SRM631_ParamTests {
 
 	}
 		
-	public SRM631_ParamTests(String[] input, int expectedResult) {
+	public SRM631_TaroGridTests(String[] input, int expectedResult) {
 		this.input = input;
 		this.expectedResult = expectedResult;
 	}
