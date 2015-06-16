@@ -27,29 +27,4 @@ public class SRM146_RectangularGrid {
 		}
 		return result;
 	}
-
-	@Test
-	public void test1() {
-		assertTrue(countRectangles(3, 3) == 22);
-	}
-	
-	@Test
-	public void test2() {
-		assertTrue(countRectangles(5,2) == 31);
-	}
-	
-	@Test
-	public void test3() {
-		assertTrue(countRectangles(10, 10) == 2640);
-	}
-	
-	@Test
-	public void test4() {
-		assertTrue(countRectangles(1, 1) == 0);
-	}
-	
-	@Test
-	public void test5() {
-		assertTrue(countRectangles(592, 964) == 81508708664L);
-	}
 }
