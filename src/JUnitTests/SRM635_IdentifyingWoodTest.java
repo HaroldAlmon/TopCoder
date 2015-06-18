@@ -23,11 +23,11 @@ public class SRM635_IdentifyingWoodTest {
 	@Parameters
 	public static List<Object []> data() {
 		return Arrays.asList( new Object [][] {
-			{"string", "longstring", NO},
-			{"oxoxoxox", "ooxxoo", NO}, 
-			{"oxoxoxox", "xxx", YES},
-			{"qwerty", "qwerty", YES},
-			{"string", "longstring", NO}
+			{"string",   "longstring", NO},
+			{"oxoxoxox", "ooxxoo",     NO}, 
+			{"oxoxoxox", "xxx",        YES},
+			{"qwerty",   "qwerty",     YES},
+			{"string",   "longstring", NO}
 		} );
 	}
 
