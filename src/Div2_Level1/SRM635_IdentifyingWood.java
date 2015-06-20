@@ -35,29 +35,4 @@ public class SRM635_IdentifyingWood {
 		result = (targetPos == targetDigits.length()) ? YES : NO;
 		return result;
 	}
-
-	@Test
-	public void IdentifyingWood() {	
-		assertTrue( check("string", "longstring").equals(NO) );
-	}
-	
-	@Test
-	public void IdentifyingWood2() {	
-		assertTrue( check("oxoxoxox", "ooxxoo").equals(NO) );
-	}
-	
-	@Test
-	public void IdentifyingWood3() {	
-		assertTrue( check("oxoxoxox", "xxx").equals(YES) );
-	}
-	
-	@Test
-	public void IdentifyingWood4() {	
-		assertTrue( check("qwerty", "qwerty").equals(YES) );
-	}
-	
-	@Test
-	public void IdentifyingWood5() {	
-		assertTrue( check("string", "longstring").equals(NO) );
-	}
 }
