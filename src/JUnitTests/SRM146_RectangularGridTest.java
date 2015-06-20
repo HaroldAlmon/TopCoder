@@ -22,10 +22,10 @@ public class SRM146_RectangularGridTest {
 	@Parameters
 	public static List<Object []> data() {
 		return Arrays.asList( new Object [][] {
-			{3, 3, 22L},
-			{5, 2, 31L}, 
-			{10, 10, 2640L},
-			{1, 1, 0L},
+			{3,   3,   22L},
+			{5,   2,   31L}, 
+			{10,  10,  2640L},
+			{1,   1,   0L},
 			{592, 964, 81508708664L}
 		} );
 	}
