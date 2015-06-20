@@ -9,13 +9,12 @@ import org.junit.Test;
 
 public class SRM639_ElectronicPetEasy {
 	public String isDifficult(int st1, int p1, int t1, int st2, int p2, int t2) {
-		Set<Integer> feedingTime = new HashSet<>();
-		for( int i=st1; i < st1 + p1 * t1; i += p1) {
-			feedingTime.add(i);
-			//System.out.printf("Added %d\n", i);
+		Set<Integer> firstFeedingTimes = new HashSet<>();
+		for( int secondFeedingTime = st1; secondFeedingTime < st1 + p1 * t1; secondFeedingTime += p1) {
+			firstFeedingTimes.add(secondFeedingTime);
 		}
 		for( int secondFeedingTime=st2; secondFeedingTime < st2 + p2 * t2; secondFeedingTime += p2) {
-			if( feedingTime.contains(secondFeedingTime) ){
+			if( firstFeedingTimes.contains(secondFeedingTime) ){
 				return "Difficult";
 			}
 		}
