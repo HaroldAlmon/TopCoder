@@ -6,7 +6,7 @@ import org.junit.Test;
 // Passed TopCoder System Test 5/25/2015
 public class SRM631_TaroGrid {
 	public int getNumber(String[] grid) {
-		int max = 0;
+		int maxCount = 0;
 		for (int column = 0; column < grid[0].length(); column++) {
 			int whiteCount;
 			int blackCount;
@@ -16,16 +16,16 @@ public class SRM631_TaroGrid {
 			for (int row = 0; row < grid.length; row++) {
 				if(grid[row].charAt(column) == 'W') {
 					whiteCount++;
-					max = Math.max(max, whiteCount);
+					maxCount = Math.max(maxCount, whiteCount);
 					blackCount = 0;
 				} else {
 					blackCount++;
-					max = Math.max(max, blackCount);
+					maxCount = Math.max(maxCount, blackCount);
 					whiteCount = 0;
 				}
 			}
 		}
-		return max;
+		return maxCount;
 	}
 
 	@Test
