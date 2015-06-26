@@ -25,11 +25,6 @@ public class SRM639_ElectronicPetEasyTest {
 	}
 	
 	@Test(timeout = 500)
-	public void test1() {
-		assertTrue(isDifficult(3, 3, 3, 5, 2, 3) == "Difficult");
-	}
-	
-	@Test(timeout = 500)
 	public void test2() {
 		assertTrue(isDifficult(3, 3, 3, 5, 2, 2) == "Easy");
 	}
