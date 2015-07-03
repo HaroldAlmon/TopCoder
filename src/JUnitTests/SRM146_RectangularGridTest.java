@@ -3,6 +3,7 @@ package JUnitTests;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 import org.junit.Test;
@@ -20,7 +21,7 @@ public class SRM146_RectangularGridTest {
 	private static SRM146_RectangularGrid rectangularGrid = new SRM146_RectangularGrid();
 
 	@Parameters
-	public static List<Object []> data() {
+	public static Collection<Object []> data() {
 		return Arrays.asList( new Object [][] {
 			{3,   3,   22L},
 			{5,   2,   31L}, 
