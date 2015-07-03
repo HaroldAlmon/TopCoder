@@ -3,12 +3,14 @@ package JUnitTests;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+
 import Div2_Level1.SRM632_RunningAroundPark;
 
 @RunWith(Parameterized.class)
@@ -20,7 +22,7 @@ public class SRM632_RunningAroundParkTest {
 	private static SRM632_RunningAroundPark runningAroundPark = new SRM632_RunningAroundPark();
 
 	@Parameters
-	public static List< Object [] > data() {
+	public static Collection< Object [] > data() {
 		return Arrays.asList(
 			new Object[][] {
 				{ 3,  new int[] { 1, 2, 3 },                       1 },

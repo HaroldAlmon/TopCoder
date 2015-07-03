@@ -20,7 +20,7 @@ public class SRM637_GreaterGameDiv2Test {
 	private static SRM637_GreaterGameDiv2 greaterGameDiv2 = new SRM637_GreaterGameDiv2();
 
 	@Parameters
-	public static List<Object []> data() {
+	public static Collection<Object []> data() {
 		return Arrays.asList( new Object[][] {
 			{ new int[] {1,3}, 			new int[] {4, 2},		1},
 			{ new int[] {1,3,5,7,9},	new int[] {2,4,6,8,10}, 0},

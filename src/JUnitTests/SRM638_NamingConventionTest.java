@@ -3,6 +3,7 @@ package JUnitTests;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 import org.junit.Test;
@@ -19,7 +20,7 @@ public class SRM638_NamingConventionTest {
 	private static SRM638_NamingConvention namingConvention = new SRM638_NamingConvention();
 	
 	@Parameters
-	public static List<Object []> data() {
+	public static Collection<Object []> data() {
 		return Arrays.asList(new Object[][] {
 			{"sum_of_two_numbers",	"sumOfTwoNumbers"},
 			{"sum_of_two_numbers",	"sumOfTwoNumbers"},

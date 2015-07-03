@@ -3,6 +3,7 @@ package JUnitTests;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 import org.junit.Test;
@@ -34,7 +35,7 @@ public class SRM639_ElectronicPetEasyTest {
 	}
 
 	@Parameters
-	public static List<Object[]> data() {
+	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][] {
 				{ new int[] { 3, 3, 3, 5, 2, 3 }, "Difficult" },
 				{ new int[] { 3, 3, 3, 5, 2, 2 }, "Easy" }

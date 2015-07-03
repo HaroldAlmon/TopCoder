@@ -3,6 +3,7 @@ package JUnitTests;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 import org.junit.Test;
@@ -21,7 +22,7 @@ public class SRM635_IdentifyingWoodTest {
 	private static final String YES = "Yep, it's wood";
 	private static final String NO = "Nope";
 	@Parameters
-	public static List<Object []> data() {
+	public static Collection<Object []> data() {
 		return Arrays.asList( new Object [][] {
 			{"string",   "longstring", NO},
 			{"oxoxoxox", "ooxxoo",     NO}, 
