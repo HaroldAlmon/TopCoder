@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import Div2_Level1.SRM636_GameOfStones;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 import org.junit.Test;
@@ -19,17 +20,17 @@ public class SRM636_GameOfStonesTest {
 	private static SRM636_GameOfStones sRM636_GameOfStones = new SRM636_GameOfStones();
 
 	@Parameters
-	public static List<Object[]> data() {
+	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][] {
-			{new int[] {7, 15, 9, 5}, 3},
-			{new int[] {17}, 0},
-			{new int[] {10, 16},-1 },
-			{new int[] {2, 6}, 1},
-			{new int[] {2, 8, 4}, -1},
+			{new int[] {7, 15, 9, 5},			 3},
+			{new int[] {17},					 0},
+			{new int[] {10, 16},				-1},
+			{new int[] {2, 6},					 1},
+			{new int[] {2, 8, 4},				-1},
 			{new int[] {10, 15, 20, 12, 1, 20}, -1},
-			{new int[] {17}, 0},
-			{new int[] {2, 6}, 1},
-			{new int[] {2, 8, 4}, -1},
+			{new int[] {17},					 0},
+			{new int[] {2, 6},					 1},
+			{new int[] {2, 8, 4},				-1},
 			{new int[] {10, 15, 20, 12, 1, 20}, -1},
 			{new int[] {17, 1, 27, 29, 13, 1, 27, 3, 19, 3, 25, 1, 11, 9, 7, 17, 31, 25, 5, 11, 31, 9, 15, 3, 3, 
 					3, 11, 11, 1, 41, 5, 95, 7, 3, 41, 31, 7, 13, 15, 5, 17, 3, 9, 3, 11, 27, 1, 23, 15, 5, 43, 
@@ -38,13 +39,13 @@ public class SRM636_GameOfStonesTest {
 		});
 	}
 
-public SRM636_GameOfStonesTest(int[] input, int result) {
-	this.input = input;
-	this.result = result;
-}
+	public SRM636_GameOfStonesTest(int[] input, int result) {
+		this.input = input;
+		this.result = result;
+	}
 
-@Test
-public void gameOfStonesTest() {
-	assertEquals( result, sRM636_GameOfStones.count(input));
-}
+	@Test
+	public void gameOfStonesTest() {
+		assertEquals(result, sRM636_GameOfStones.count(input));
+	}
 }
