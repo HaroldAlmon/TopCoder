@@ -37,11 +37,11 @@ public class SRM639_ElectronicPetEasyTest {
 	@Parameters
 	public static List<Object[]> data() {
 		return Arrays.asList(new Object[][] {
-				{ new int[] { 3, 3, 3, 5, 2, 3 }, "Difficult" },
-				{ new int[] { 3, 3, 3, 5, 2, 2 }, "Easy" },
-				{ new int[] { 1, 4, 6, 1, 4, 7 }, "Difficult" },
-				{ new int[] { 1, 1, 1, 2, 2, 2 }, "Easy" },
-				{ new int[] { 1, 1000, 1000, 2, 1000, 1000 }, "Easy" },
+			{ new int[] { 3, 3, 3, 5, 2, 3 }, "Difficult" },
+			{ new int[] { 3, 3, 3, 5, 2, 2 }, "Easy" },
+			{ new int[] { 1, 4, 6, 1, 4, 7 }, "Difficult" },
+			{ new int[] { 1, 1, 1, 2, 2, 2 }, "Easy" },
+			{ new int[] { 1, 1000, 1000, 2, 1000, 1000 }, "Easy" },
 		});
 	}
 	
