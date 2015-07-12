@@ -20,29 +20,4 @@ public class SRM639_ElectronicPetEasy {
 		}
 		return "Easy";
 	}
-	
-	@Test(timeout = 500)
-	public void test1() {
-		assertTrue(isDifficult(3, 3, 3, 5, 2, 3) == "Difficult");
-	}
-	
-	@Test(timeout = 500)
-	public void test2() {
-		assertTrue(isDifficult(3, 3, 3, 5, 2, 2) == "Easy");
-	}
-
-	@Test(timeout = 500)
-	public void test3() {
-		assertTrue(isDifficult(1, 4, 6, 1, 4, 7) == "Difficult");
-	}
-	
-	@Test(timeout = 500)
-	public void test4() {
-		assertTrue(isDifficult(1, 1000, 1000, 2, 1000, 1000) == "Easy");
-	}
-	
-	@Test(timeout = 500)
-	public void test5() {
-		assertTrue(isDifficult(1, 1, 1, 2, 2, 2) == "Easy");
-	}
 }
