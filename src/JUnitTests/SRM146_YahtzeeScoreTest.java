@@ -3,8 +3,7 @@ package JUnitTests;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
-import java.util.List;
-
+import java.util.Collection;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -20,7 +19,7 @@ public class SRM146_YahtzeeScoreTest {
 	private static SRM146_YahtzeeScore yahtzeeScore = new SRM146_YahtzeeScore();
 
 	@Parameters
-	public static List<Object []> data() {
+	public static Collection<Object []> data() {
 		return Arrays.asList( new Object [][] {
 			{new int[] { 2, 2, 3, 5, 4 }, 5},
 			{new int[] { 6, 4, 1, 1, 3 }, 6}, 

@@ -3,7 +3,7 @@ package JUnitTests;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
-import java.util.List;
+import java.util.Collection;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,7 +20,7 @@ public class SRM631_TaroGridTests {
 
 
 	@Parameters
-	public static List<Object []> data() {
+	public static Collection<Object []> data() {
 		return Arrays.asList( new Object [][] {
 			{ new String[] {
 				"W"}, 1 },

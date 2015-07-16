@@ -8,8 +8,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import java.util.Arrays;
-import java.util.List;
-
+import java.util.Collection;
 import Div2_Level1.SRM645_BacteriesColony;
 
 @RunWith(Parameterized.class)
@@ -19,7 +18,7 @@ public class SRM645_BacteriesColonyTest {
 	int[] after;
 
 @Parameters
-public static List<Object []> data() {
+public static Collection<Object []> data() {
 	Object [][] data = {
 		{ new int[] { 5, 3, 4, 6, 1 },          new int[] { 5, 4, 4, 4, 1 } },
 		{ new int[] { 1, 5, 4, 9 },             new int[] { 1, 4, 5, 9 } },
