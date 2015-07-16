@@ -13,37 +13,41 @@ public class SRM647_PeacefulLine {
 	public static int testNo = 1;
 	private final int MAX=26;
 	public String makeLine(int[] x) {
+		
+		// Create alias for x...
+		int [] studentAge = x;
 		int[] result = new int[MAX];
 		int freePos = 0;
 
-		if (x == null || x.length >= MAX) {
+		if (studentAge == null || studentAge.length >= MAX) {
 			System.out.println("impossible");
 			return "impossible";
 		}
 		int[] total = new int[MAX];
-		for (int i = 0; i < x.length; i++) {
-			if (x[i] <= 0 || x[i] >= MAX) {
+		for (int studentPos = 0; studentPos < studentAge.length; studentPos++) {
+			if (studentAge[studentPos] <= 0 || studentAge[studentPos] >= MAX) {
 				System.out.println("impossible");
 				return "impossible";
 			}
-			total[x[i]]++;
+			total[studentAge[studentPos]]++;
 		}
+
 		while(true) {
-			int i;
+			int studentPos;
 			int first, second;
 			first = 0;
 			second = 0;
-			for (i = 0; i < MAX; i++) {
-				if (total[i] > total[first]) {
-					first = i;
+			for (studentPos = 0; studentPos < MAX; studentPos++) {
+				if (total[studentPos] > total[first]) {
+					first = studentPos;
 				}
 			}
 			result[freePos] = first;
 			freePos += 1;
 
-			for (i = 0; i < MAX; i++) {
-				if ((total[i] > total[second]) && i != first) {
-					second = i;
+			for (studentPos = 0; studentPos < MAX; studentPos++) {
+				if ((total[studentPos] > total[second]) && studentPos != first) {
+					second = studentPos;
 				}
 			}
 			result[freePos] = second;

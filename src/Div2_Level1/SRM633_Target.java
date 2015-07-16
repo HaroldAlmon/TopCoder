@@ -65,4 +65,14 @@ public class SRM633_Target {
 	public void Target() {
 		draw(5);
 	}
+	
+	@Test
+	public void Target10() {
+		draw(10);
+	}
+	
+	@Test
+	public void Target20() {
+		draw(20);
+	}
 }

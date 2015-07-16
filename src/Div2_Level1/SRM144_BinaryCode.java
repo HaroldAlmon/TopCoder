@@ -1,6 +1,8 @@
 package Div2_Level1;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+
 import org.junit.Test;
 
 // Passed Topcoder System Test 5/24/2015
@@ -63,8 +65,8 @@ public class SRM144_BinaryCode {
 		System.out.println( result[ 0 ] );
 		System.out.println( result[ 1 ] );
 		
-		assertTrue( result[ 0 ].equals( "00" ) );
-		assertTrue( result[ 1 ].equals( "NONE" ) );
+		assertEquals( "00", result[ 0 ] );
+		assertEquals( "NONE", result[ 1 ] );
 		return;
 	}
 	

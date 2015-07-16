@@ -3,8 +3,7 @@ package Div2_Level1;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-
-//Passed TopCoder System Test 5/25/2015
+/** Passed TopCoder System Test 05/29/2015 */
 public class SRM635_IdentifyingWood {
 	private final String YES = "Yep, it's wood.";
 	private final String NO = "Nope.";
@@ -35,14 +34,5 @@ public class SRM635_IdentifyingWood {
 		}
 		result = (targetPos == targetDigits.length()) ? YES : NO;
 		return result;
-	}
-
-	@Test
-	public void IdentifyingWood() {	
-		assertTrue( check("absdefgh", "asdf").equals(YES) );
-		assertTrue( check("oxoxoxox", "ooxxoo").equals(NO) );
-		assertTrue( check("oxoxoxox", "xxx").equals(YES) );
-		assertTrue( check("qwerty", "qwerty").equals(YES) );
-		assertTrue( check("string", "longstring").equals(NO) );
 	}
 }

@@ -20,12 +20,4 @@ public class SRM638_NamingConvention {
 		System.out.printf("%s%n", result);
 		return result.toString();
 	}
-	@Test
-	public void test1() {
-		assertTrue(toCamelCase("sum_of_two_numbers").equals("sumOfTwoNumbers"));
-		assertTrue(toCamelCase("variable").equals("variable"));
-		assertTrue(toCamelCase("variable").equals("variable"));
-		assertTrue(toCamelCase("t_o_p_c_o_d_e_r").equals("tOPCODER"));
-		assertTrue(toCamelCase("the_variable_name_can_be_very_long_like_this").equals("theVariableNameCanBeVeryLongLikeThis"));
-		}
 }
