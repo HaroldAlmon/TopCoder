@@ -1,6 +1,7 @@
 package JUnitTests;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -37,8 +38,11 @@ public class SRM639_ElectronicPetEasyTest {
 	@Parameters
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][] {
-				{ new int[] { 3, 3, 3, 5, 2, 3 }, "Difficult" },
-				{ new int[] { 3, 3, 3, 5, 2, 2 }, "Easy" }
+			{ new int[] { 3, 3, 3, 5, 2, 3 }, "Difficult" },
+			{ new int[] { 3, 3, 3, 5, 2, 2 }, "Easy" },
+			{ new int[] { 1, 4, 6, 1, 4, 7 }, "Difficult" },
+			{ new int[] { 1, 1, 1, 2, 2, 2 }, "Easy" },
+			{ new int[] { 1, 1000, 1000, 2, 1000, 1000 }, "Easy" },
 		});
 	}
 	
@@ -46,20 +50,4 @@ public class SRM639_ElectronicPetEasyTest {
 	public void ElectronicPetEasyTest() {
 		assertEquals( result, electronicPetEasy.isDifficult(st1, p1, t1, st2, p2, t2));
 	}
-	
-	/*
-	@Test(timeout = 500)
-	public void test3() {
-		assertTrue(isDifficult(1, 4, 6, 1, 4, 7) == "Difficult");
-	}
-	
-	@Test(timeout = 500)
-	public void test4() {
-		assertTrue(isDifficult(1, 1000, 1000, 2, 1000, 1000) == "Easy");
-	}
-	
-	@Test(timeout = 500)
-	public void test5() {
-		assertTrue(isDifficult(1, 1, 1, 2, 2, 2) == "Easy");
-	}*/
 }
