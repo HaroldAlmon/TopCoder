@@ -9,8 +9,6 @@ import org.junit.runners.Parameterized.Parameters;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
-
 import Div2_Level1.SRM645_BacteriesColony;
 
 @RunWith(Parameterized.class)

@@ -12,6 +12,7 @@ import org.junit.runners.Parameterized.Parameters;
 
 import Div2_Level1.SRM637_GreaterGameDiv2;
 
+
 @RunWith(Parameterized.class)
 public class SRM637_GreaterGameDiv2Test {
 	int cardListSnuke[];
@@ -39,7 +40,6 @@ public class SRM637_GreaterGameDiv2Test {
 		this.cardListSothe = cardListSothe;
 		this.result = result;
 	}
-
 	@Test
 	public void greaterGameDiv2Test() {
 		assertEquals(result, greaterGameDiv2.calc(cardListSnuke, cardListSothe ));
