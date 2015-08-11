@@ -1,8 +1,5 @@
 package Div2_Level1;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
 /** Passed TopCoder System Test 05/29/2015 */
 public class SRM636_GameOfStones {
 	public int count(int[] stones) {

@@ -44,8 +44,6 @@ public class SRM631_TaroGridTests {
 				"WWBBWWBB",
 				"WWBBWWBB"}, 2 }
 			});
-		
-
 	}
 		
 	public SRM631_TaroGridTests(String[] input, int expectedResult) {
