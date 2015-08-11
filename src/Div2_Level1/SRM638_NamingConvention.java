@@ -1,9 +1,5 @@
 package Div2_Level1;
 
-import static org.junit.Assert.assertTrue;
-
-import org.junit.Test;
-
 public class SRM638_NamingConvention {
 	public String toCamelCase(String variableName) {
 		StringBuffer result = new StringBuffer();
