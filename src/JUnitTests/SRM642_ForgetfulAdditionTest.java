@@ -1,10 +1,26 @@
 package JUnitTests;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.Collection;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+
+import Div2_Level1.SRM642_ForgetfulAddition;
+
+@RunWith(Parameterized.class)
 public class SRM642_ForgetfulAdditionTest {
-	int minNumber( String expression ) {
+	private int expectedResult;
+	private String expression;
+	
+	private static SRM642_ForgetfulAddition forgetfulAddition = new SRM642_ForgetfulAddition();
+
+	public static int minNumber( String expression ) {
 		int minimumSum = Integer.MAX_VALUE;
 		
 		for ( int digitIndex = 1; digitIndex < expression.length(); digitIndex++ ) {
@@ -23,30 +39,25 @@ public class SRM642_ForgetfulAdditionTest {
 
 		return minimumSum;
 	}
-
-	@Test
-	public void test1() {
-		assertTrue(minNumber("22") == 4 );
+	
+	@Parameters
+	public static Collection< Object [] > getData() {
+		return Arrays.asList(new Object[][] {
+			{ "22",			4},
+			{ "123",		15},
+			{ "1289",		101},
+			{ "31415926",	9067}
+		});
 	}
 	
-	@Test
-	public void test2() {
-		assertTrue(minNumber("123") == 15 );
-	}
-	
-	@Test
-	public void test3() {
-		assertTrue(minNumber("1289") == 101 );
-	}
-	
-	@Test
-	public void test4() {
-		assertTrue(minNumber("31415926") == 9067 );
+	public SRM642_ForgetfulAdditionTest( String input, int expectedResult ) {
+		this.expression = input;
+		this.expectedResult = expectedResult;
 	}
 
-	@Test
-	public void test5() {
-		assertTrue(minNumber("98765") == 863 );
+	@Test( timeout = 500)
+	public void ForgetfulAdditionTest() {
+		assertEquals( forgetfulAddition.minNumber( expression ), expectedResult );
 	}
 }
 
