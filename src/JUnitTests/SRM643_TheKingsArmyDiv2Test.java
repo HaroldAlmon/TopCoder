@@ -2,37 +2,36 @@ package JUnitTests;
 
 import static org.junit.Assert.assertTrue;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
+@RunWith(Parameterized.class)
 public class SRM643_TheKingsArmyDiv2Test {
-	public int getNumber(String[] state)  {
-		boolean found = false;
+	@Parameters
+	public static Collection<Object []> getData() {
+		return Arrays.asList( new Object[][] {
+		{new String[]  
+			{"SSSSS",
+			"SSHHS",
+			"SSSSS"},	0},
 		
-		if ( state[0].indexOf("HH") >= 0) 
-			// Foundhappy soldiers...
-			return 0;
-		
-		if ( state[0].indexOf("H") >= 0) 
-			found = true;
-		
-		for (int i = 1; i < state.length; i++) {
-			// Found a pair BESIDE eachother...
-			if ( state[i].indexOf("HH") >= 0) 
-				return 0;
-
-			// check the current and previous row...
-			for (int j = 0; j < state[i].length(); j++) {
-				if (state[i].charAt(j) == 'H' &&  state[i-1].charAt(j) == 'H') 
-					return 0;
-			}
+		{new String[]
+			{"SSSSS",
+			"SSHSH",
+			"HSSSS"},	1},
 			
-			// Found a single soldier...
-			if ( state[i].indexOf("H") >= 0) 
-				found = true;
-		}
-		// If at least one soldier, need to add one more, else add two...
-		return found == true ? 1 : 2;
+		{ new String[] 
+			{"SSS",
+			"SSS",
+			"SSS"}, 2}	
+		});
 	}
+	
 	@Test
 	public void test1() {
 		String[] s = 
@@ -41,27 +40,6 @@ public class SRM643_TheKingsArmyDiv2Test {
 		"SSSSS"};
 
 		assertTrue( getNumber(s) == 0);
-	}
-	
-	@Test
-	public void test2() {
-		String[] s = 
-			{"SSSSS",
-			"SSHSH",
-			"HSSSS"};
-
-		assertTrue( getNumber(s) == 1);
-	}
-	
-	
-	@Test
-	public void test3() {
-		String[] s = 
-			{"SSS",
-				 "SSS",
-				 "SSS"};
-
-		assertTrue( getNumber(s) == 2);
 	}
 	
 	@Test

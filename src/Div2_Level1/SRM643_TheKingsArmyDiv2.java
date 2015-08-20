@@ -9,14 +9,14 @@ public class SRM643_TheKingsArmyDiv2 {
 		boolean found = false;
 		
 		if ( state[0].indexOf("HH") >= 0) 
-			// Foundhappy soldiers...
+			// Found happy soldiers...
 			return 0;
 		
 		if ( state[0].indexOf("H") >= 0) 
 			found = true;
 		
 		for (int i = 1; i < state.length; i++) {
-			// Found a pair BESIDE eachother...
+			// Found a pair BESIDE each other...
 			if ( state[i].indexOf("HH") >= 0) 
 				return 0;
 
