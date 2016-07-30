@@ -71,7 +71,7 @@ public class SRM643_TheKingsArmyDiv2Test {
 		"HSSS",
 		"SSSS"};
 
-		assertTrue( getNumber(s) == 0);
+		assertTrue( theKingsArmyDiv2.getNumber(s) == 0);
 	}
 	
 	@Test
@@ -81,7 +81,7 @@ public class SRM643_TheKingsArmyDiv2Test {
 		"HSSS",
 		"HSSS"};
 
-		assertTrue( getNumber(s) == 0);
+		assertTrue( theKingsArmyDiv2.getNumber(s) == 0);
 	}
 
 	@Test
@@ -91,6 +91,6 @@ public class SRM643_TheKingsArmyDiv2Test {
 		"SSSH",
 		"SSSH"};
 
-		assertTrue( getNumber(s) == 0);
+		assertTrue( theKingsArmyDiv2.getNumber(s) == 0);
 	}
 }
