@@ -1,11 +1,7 @@
 package Div2_Level1;
 
-import static org.junit.Assert.assertTrue;
-
 import java.util.Collections;
 import java.util.HashMap;
-
-import org.junit.Test;
 
 // Passed TopCoder System Test 5/24/2015
 public class SRM146_YahtzeeScore {

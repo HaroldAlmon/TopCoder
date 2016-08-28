@@ -3,8 +3,6 @@ package Div2_Level1;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-import java.util.Arrays;
-
 import org.junit.Test;
 
 // From TopCoder.com,   SRM 647 

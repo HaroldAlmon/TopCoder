@@ -28,7 +28,6 @@ public class SRM646_CopyOfTheGridDivTwo {
 	
 	private int moveUp(int px, int py, int[] x, int[] y, int k) {
 		// Can we go right?
-		int max = px;
 		boolean block = false;
 		for (int i = 0; i < y.length; i++) {
 			System.out.printf("Check (%d,%d)\n", x[i], y[i]);

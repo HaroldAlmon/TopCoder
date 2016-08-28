@@ -118,7 +118,7 @@ public class SRM648_ABC {
 	public void test3() {
 		String result = createString(5,10);
 		System.out.printf("test %d, result(5,10)=[%s]\n", testNo++, result);
-		assertTrue(result.equals( "" ));
+		assertTrue(result.isEmpty());
 	}
 	
 	@Test

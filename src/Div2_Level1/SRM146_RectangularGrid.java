@@ -1,9 +1,5 @@
 package Div2_Level1;
 
-import static org.junit.Assert.assertTrue;
-
-import org.junit.Test;
-
 // Passed TopCoder System Test on 5/24/2015
 public class SRM146_RectangularGrid {
 	public static void main(String[] args) {

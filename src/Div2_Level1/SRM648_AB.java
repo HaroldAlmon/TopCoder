@@ -88,7 +88,7 @@ public class SRM648_AB {
 	public void test3() {
 		String result = createString(5,8);
 		System.out.printf("test %d, result(5,8)=[%s]\n", testNo++, result);
-		assertTrue(result.equals( "" ));
+		assertTrue(result.isEmpty());
 	}
 	
 	@Test
