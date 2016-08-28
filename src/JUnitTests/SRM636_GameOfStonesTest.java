@@ -37,13 +37,13 @@ public class SRM636_GameOfStonesTest {
 		});
 	}
 
-public SRM636_GameOfStonesTest(int[] input, int result) {
-	this.input = input;
-	this.result = result;
-}
+	public SRM636_GameOfStonesTest(int[] input, int result) {
+		this.input = input;
+		this.result = result;
+	}
 
-@Test
-public void gameOfStonesTest() {
-	assertEquals( result, sRM636_GameOfStones.count(input));
-}
+	@Test
+	public void gameOfStonesTest() {
+		assertEquals(result, sRM636_GameOfStones.count(input));
+	}
 }
