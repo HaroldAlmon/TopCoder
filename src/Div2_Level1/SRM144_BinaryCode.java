@@ -3,6 +3,9 @@ package Div2_Level1;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 import org.junit.Test;
 
 // Passed Topcoder System Test 5/24/2015
@@ -56,7 +59,7 @@ public class SRM144_BinaryCode {
 	}
 	
 	@Test
-	public void test0() {
+	public void matchesDecodedValue_00() {
 		// Encrypted string...	
 		String Q = "00";
 	
@@ -65,13 +68,13 @@ public class SRM144_BinaryCode {
 		System.out.println( result[ 0 ] );
 		System.out.println( result[ 1 ] );
 		
-		assertEquals( "00", result[ 0 ] );
-		assertEquals( "NONE", result[ 1 ] );
+		assertThat( result[ 0 ], is("00") );
+		assertThat( "Decoded string is incorrect", result[ 1 ], is("NONE"));
 		return;
 	}
 	
 	@Test
-	public void test1() {
+	public void matchesDecodedValue_123210122() {
 		// Encrypted string...	
 		String Q = "123210122";
 	
@@ -80,12 +83,12 @@ public class SRM144_BinaryCode {
 		System.out.println( result[0] );
 		System.out.println( result[1] );
 		
-		assertTrue( result[0].equals("011100011"));
-		assertTrue( result[1].equals("NONE"));
+		assertThat( result[0], is("011100011"));
+		assertThat( result[1], is("NONE"));
 	}
 	
 	@Test
-	public void test2() {
+	public void matchesDecodedValue_11() {
 		// Encrypted string...	
 		String Q = "11";
 	
@@ -94,12 +97,12 @@ public class SRM144_BinaryCode {
 		System.out.println( result[0] );
 		System.out.println( result[1] );
 		
-		assertTrue( result[0].equals("01"));
-		assertTrue( result[1].equals("10"));		
+		assertThat( result[0], is("01"));
+		assertThat( result[1], is("10"));		
 	}
 	
 	@Test
-	public void test3() { 
+	public void matchesDecodedValue_22111() { 
 		// Encrypted string...	
 		String Q = "22111";
 	
@@ -108,12 +111,12 @@ public class SRM144_BinaryCode {
 		System.out.println( result[0] );
 		System.out.println( result[1] );
 		
-		assertTrue( result[0].equals("NONE"));
-		assertTrue( result[1].equals("11001"));	
+		assertThat( result[0], is("NONE"));
+		assertThat( result[1], is("11001"));	
 	}
 
 	@Test
-	public void test4() { 
+	public void matchesDecodedValue_123210120() { 
 		// Encrypted string...	
 		String Q = "123210120";
 	
@@ -122,12 +125,12 @@ public class SRM144_BinaryCode {
 		System.out.println( result[0] );
 		System.out.println( result[1] );
 		
-		assertTrue( result[0].equals("NONE"));
-		assertTrue( result[1].equals("NONE"));	
+		assertThat( result[0], is("NONE"));
+		assertThat( result[1], is("NONE"));	
 	}
 	
 	@Test
-	public void test5() { 
+	public void matchesDecodedValue_3() { 
 		// Encrypted string...	
 		String Q = "3";
 	
@@ -136,12 +139,12 @@ public class SRM144_BinaryCode {
 		System.out.println( result[0] );
 		System.out.println( result[1] );
 		
-		assertTrue( result[0].equals("NONE"));
-		assertTrue( result[1].equals("NONE"));	
+		assertThat( result[0], is("NONE"));
+		assertThat( result[1], is("NONE"));	
 	}
 
 	@Test
-	public void test6() { 
+	public void matchesDecodedValue_12221112222221112221111111112221111() { 
 		// Encrypted string...	
 		String Q = "12221112222221112221111111112221111";
 	
@@ -150,7 +153,7 @@ public class SRM144_BinaryCode {
 		System.out.println( result[0] );
 		System.out.println( result[1] );
 		
-		assertTrue( result[0].equals("01101001101101001101001001001101001"));
-		assertTrue( result[1].equals("10110010110110010110010010010110010"));	
+		assertThat( result[0], is("01101001101101001101001001001101001"));
+		assertThat( result[1], is("10110010110110010110010010010110010"));	
 	}	
 }
