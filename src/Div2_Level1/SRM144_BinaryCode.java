@@ -1,8 +1,5 @@
 package Div2_Level1;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -65,11 +62,8 @@ public class SRM144_BinaryCode {
 	
 		String[] result = decode(Q);
 		
-		System.out.println( result[ 0 ] );
-		System.out.println( result[ 1 ] );
-		
-		assertThat( result[ 0 ], is("00") );
-		assertThat( "Decoded string is incorrect", result[ 1 ], is("NONE"));
+		assertThat( decodedStringIsIncorrect(), result[ 0 ], is("00") );
+		assertThat( decodedStringIsIncorrect(), result[ 1 ], is("NONE"));
 		return;
 	}
 	
@@ -80,11 +74,8 @@ public class SRM144_BinaryCode {
 	
 		String[] result = decode(Q);
 		
-		System.out.println( result[0] );
-		System.out.println( result[1] );
-		
-		assertThat( result[0], is("011100011"));
-		assertThat( result[1], is("NONE"));
+		assertThat( decodedStringIsIncorrect(), result[0], is("011100011"));
+		assertThat( decodedStringIsIncorrect(), result[1], is("NONE"));
 	}
 	
 	@Test
@@ -94,11 +85,8 @@ public class SRM144_BinaryCode {
 	
 		String[] result = decode(Q);
 		
-		System.out.println( result[0] );
-		System.out.println( result[1] );
-		
-		assertThat( result[0], is("01"));
-		assertThat( result[1], is("10"));		
+		assertThat( decodedStringIsIncorrect(), result[0], is("01"));
+		assertThat( decodedStringIsIncorrect(), result[1], is("10"));		
 	}
 	
 	@Test
@@ -108,11 +96,8 @@ public class SRM144_BinaryCode {
 	
 		String[] result = decode(Q);
 		
-		System.out.println( result[0] );
-		System.out.println( result[1] );
-		
-		assertThat( result[0], is("NONE"));
-		assertThat( result[1], is("11001"));	
+		assertThat( decodedStringIsIncorrect(), result[0], is("NONE"));
+		assertThat( decodedStringIsIncorrect(), result[1], is("11001"));	
 	}
 
 	@Test
@@ -122,11 +107,8 @@ public class SRM144_BinaryCode {
 	
 		String[] result = decode(Q);
 		
-		System.out.println( result[0] );
-		System.out.println( result[1] );
-		
-		assertThat( result[0], is("NONE"));
-		assertThat( result[1], is("NONE"));	
+		assertThat( decodedStringIsIncorrect(), result[0], is("NONE"));
+		assertThat( decodedStringIsIncorrect(), result[1], is("NONE"));	
 	}
 	
 	@Test
@@ -136,11 +118,8 @@ public class SRM144_BinaryCode {
 	
 		String[] result = decode(Q);
 		
-		System.out.println( result[0] );
-		System.out.println( result[1] );
-		
-		assertThat( result[0], is("NONE"));
-		assertThat( result[1], is("NONE"));	
+		assertThat( decodedStringIsIncorrect(), result[0], is("NONE"));
+		assertThat( decodedStringIsIncorrect(), result[1], is("NONE"));	
 	}
 
 	@Test
@@ -150,10 +129,11 @@ public class SRM144_BinaryCode {
 	
 		String[] result = decode(Q);
 		
-		System.out.println( result[0] );
-		System.out.println( result[1] );
-		
-		assertThat( result[0], is("01101001101101001101001001001101001"));
-		assertThat( result[1], is("10110010110110010110010010010110010"));	
+		assertThat( decodedStringIsIncorrect(), result[0], is("01101001101101001101001001001101001"));
+		assertThat( decodedStringIsIncorrect(), result[1], is("10110010110110010110010010010110010"));	
 	}	
+	
+	private String decodedStringIsIncorrect() {
+		return "Decoded string is incorrect";
+	}
 }
