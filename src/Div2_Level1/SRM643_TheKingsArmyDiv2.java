@@ -2,6 +2,7 @@ package Div2_Level1;
 
 import static org.junit.Assert.assertTrue;
 
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class SRM643_TheKingsArmyDiv2 {
@@ -32,6 +33,10 @@ public class SRM643_TheKingsArmyDiv2 {
 		}
 		// If at least one soldier, need to add one more, else add two...
 		return found == true ? 1 : 2;
+	}
+	@BeforeClass
+	public static void printClassName() {
+		System.out.println(SRM643_TheKingsArmyDiv2.class.getName());
 	}
 	@Test
 	public void test1() {
